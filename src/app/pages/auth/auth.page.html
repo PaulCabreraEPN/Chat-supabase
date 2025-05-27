@@ -1,0 +1,39 @@
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar>
+    <ion-title>Poli-Chat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding content">
+  <div class="page-title">Poli-Chat</div>
+
+  <div class="form-container">
+    <ion-input
+      [(ngModel)]="email"
+      placeholder="Email"
+      type="email"
+      autocomplete="email"
+      autocapitalize="off"
+      class="input-field"
+    ></ion-input>
+
+    <ion-input
+      [(ngModel)]="password"
+      type="password"
+      placeholder="Password"
+      autocomplete="current-password"
+      class="input-field"
+    ></ion-input>
+
+    <ion-button expand="block" color="primary" (click)="login()" class="btn-login">
+      Iniciar Sesión
+    </ion-button>
+
+    <ion-button expand="block" color="secondary" (click)="register()" class="btn-register">
+      Registrarse
+    </ion-button>
+
+    <p *ngIf="error" class="error-message">{{ error }}</p>
+  </div>
+</ion-content>
+

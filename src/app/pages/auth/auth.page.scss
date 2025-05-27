@@ -1,0 +1,89 @@
+$color-primary: #5a67d8;
+$color-secondary: #48bb78; // Verde moderno
+$color-bg: #f7fafc;
+$color-input-bg: #e2e8f0;
+$color-text: #2d3748;
+$color-error: #e53e3e;
+
+.page-title {
+  font-size: 3.6rem;
+  font-weight: 900;
+  color: $color-primary;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+  user-select: none;
+}
+
+
+.header {
+  --background: $color-primary;
+  ion-title {
+    color: white;
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+}
+
+.content {
+  background-color: $color-bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.input-field {
+  --background: $color-input-bg;
+  border-radius: 10px;
+  padding-left: 15px;
+  height: 45px;
+  font-size: 1rem;
+  color: $color-text;
+  --placeholder-color: darken($color-text, 30%);
+}
+
+ion-button {
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(90, 103, 216, 0.25);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-login {
+  --background: $color-primary;
+  --color: white;
+
+  &:hover,
+  &:focus {
+    --background: darken($color-primary, 10%);
+    box-shadow: 0 6px 14px rgba(90, 103, 216, 0.4);
+  }
+}
+
+.btn-register {
+  --background: $color-secondary;
+  --color: white;
+
+  &:hover,
+  &:focus {
+    --background: darken($color-secondary, 10%);
+    box-shadow: 0 6px 14px rgba(72, 187, 120, 0.4);
+  }
+}
+
+.error-message {
+  color: $color-error;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 8px;
+}

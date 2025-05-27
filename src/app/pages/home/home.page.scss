@@ -1,0 +1,292 @@
+/* Variables de colores modernos */
+$color-primary: #5a67d8;      // Indigo
+$color-primary-dark: #434190;
+$color-danger: #e53e3e;       // Rojo fuerte
+$color-bg: #f7fafc;           // Gris claro suave
+$color-msg-bg: #e0e7ff;       // Azul muy suave
+$color-msg-bg-alt: #c3dafe;   // Azul un poco más fuerte
+$color-text-primary: #2d3748; // Gris oscuro
+$color-text-secondary: #4a5568; // Gris medio
+
+/* Header */
+.header {
+  --background: $color-primary;
+  ion-title {
+    color: white;
+    font-weight: 700;
+  }
+}
+
+/* Contenedor principal */
+.content {
+  background-color: $color-bg;
+  padding-bottom: 80px; // espacio para input fijo
+}
+
+/* Bienvenida */
+.welcome-container {
+  text-align: center;
+  margin-bottom: 15px;
+
+  .welcome-text {
+    font-size: 1.2rem;
+    color: $color-text-primary;
+    margin-bottom: 10px;
+  }
+
+  .logout-btn {
+    --background: $color-danger;
+    --border-radius: 8px;
+    font-weight: 600;
+  }
+}
+
+/* Lista de mensajes */
+.messages-list {
+  max-height: calc(100vh - 220px);
+  overflow-y: auto;
+  padding: 0 16px;
+
+  .message-item {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: $color-msg-bg;
+    padding: 10px 15px;
+
+    /* Alternar color de fondo para mensajes pares */
+    &:nth-child(even) {
+      background-color: $color-msg-bg-alt;
+    }
+
+    ion-label {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .message-sender {
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: $color-primary-dark;
+      margin-bottom: 4px;
+      text-transform: lowercase;
+      opacity: 0.75;
+    }
+
+    .message-content {
+      font-size: 1rem;
+      color: $color-text-primary;
+      white-space: pre-wrap;
+    }
+  }
+}
+
+/* Botón Cerrar Sesión (logout) */
+.logout-btn {
+  --background: $color-danger;
+  --color: #fff;
+  --box-shadow: 0 4px 10px rgba(229, 62, 62, 0.4);
+  --border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover,
+  &:focus {
+    --background: darken($color-danger, 10%);
+    --box-shadow: 0 6px 14px rgba(229, 62, 62, 0.6);
+  }
+}
+
+/* Botón Enviar */
+.send-btn {
+  --background: $color-primary;
+  --color: #fff;
+  --box-shadow: 0 4px 12px rgba(90, 103, 216, 0.6);
+  --border-radius: 25px;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 10px 22px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover,
+  &:focus {
+    --background: $color-primary-dark;
+    --box-shadow: 0 6px 16px rgba(67, 65, 144, 0.8);
+  }
+}
+
+/* Ajustes generales para botones Ion */
+ion-button {
+  text-transform: none; /* Para evitar mayúsculas automáticas */
+  box-shadow: var(--box-shadow);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Footer con input y botón alineados */
+ion-footer ion-toolbar {
+  display: flex;
+  gap: 10px;
+  padding: 10px 16px;
+  background-color: #fff; /* fondo blanco, cambia si quieres */
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1); /* sombra sutil arriba */
+}
+
+.message-input {
+  flex-grow: 1;
+  --padding-start: 14px;
+  --padding-end: 14px;
+  border-radius: 24px;
+  background-color: #f1f3f8;
+  font-size: 1rem;
+  height: 44px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+/* Variables de colores modernos */
+$color-primary: #5a67d8;      // Indigo
+$color-primary-dark: #434190;
+$color-danger: #e53e3e;       // Rojo fuerte
+$color-bg: #f7fafc;           // Gris claro suave
+$color-msg-bg: #e0e7ff;       // Azul muy suave
+$color-msg-bg-alt: #c3dafe;   // Azul un poco más fuerte
+$color-text-primary: #2d3748; // Gris oscuro
+$color-text-secondary: #4a5568; // Gris medio
+
+/* Header */
+.header {
+  --background: $color-primary;
+  ion-title {
+    color: white;
+    font-weight: 700;
+  }
+}
+
+/* Contenedor principal */
+.content {
+  background-color: $color-bg;
+  padding-bottom: 80px; // espacio para input fijo
+}
+
+/* Bienvenida */
+.welcome-container {
+  text-align: center;
+  margin-bottom: 15px;
+
+  .welcome-text {
+    font-size: 1.2rem;
+    color: $color-text-primary;
+    margin-bottom: 10px;
+  }
+
+  .logout-btn {
+    --background: $color-danger;
+    --border-radius: 8px;
+    font-weight: 600;
+  }
+}
+
+/* Lista de mensajes */
+.messages-list {
+  max-height: calc(100vh - 220px);
+  overflow-y: auto;
+  padding: 0 16px;
+
+  .message-item {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: $color-msg-bg;
+    padding: 10px 15px;
+
+    /* Alternar color de fondo para mensajes pares */
+    &:nth-child(even) {
+      background-color: $color-msg-bg-alt;
+    }
+
+    ion-label {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .message-sender {
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: $color-primary-dark;
+      margin-bottom: 4px;
+      text-transform: lowercase;
+      opacity: 0.75;
+    }
+
+    .message-content {
+      font-size: 1rem;
+      color: $color-text-primary;
+      white-space: pre-wrap;
+    }
+  }
+}
+
+/* Botón Cerrar Sesión (logout) */
+.logout-btn {
+  --background: $color-danger;
+  --color: #fff;
+  --box-shadow: 0 4px 10px rgba(229, 62, 62, 0.4);
+  --border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover,
+  &:focus {
+    --background: darken($color-danger, 10%);
+    --box-shadow: 0 6px 14px rgba(229, 62, 62, 0.6);
+  }
+}
+
+/* Botón Enviar */
+.send-btn {
+  --background: $color-primary;
+  --color: #fff;
+  --box-shadow: 0 4px 12px rgba(90, 103, 216, 0.6);
+  --border-radius: 25px;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 10px 22px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover,
+  &:focus {
+    --background: $color-primary-dark;
+    --box-shadow: 0 6px 16px rgba(67, 65, 144, 0.8);
+  }
+}
+
+/* Ajustes generales para botones Ion */
+ion-button {
+  text-transform: none; /* Para evitar mayúsculas automáticas */
+  box-shadow: var(--box-shadow);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Footer con input y botón alineados */
+ion-footer ion-toolbar {
+  display: flex;
+  gap: 10px;
+  padding: 10px 16px;
+  background-color: #fff; /* fondo blanco, cambia si quieres */
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1); /* sombra sutil arriba */
+}
+
+.message-input {
+  flex-grow: 1;
+  --padding-start: 14px;
+  --padding-end: 14px;
+  border-radius: 24px;
+  background-color: #f1f3f8;
+  font-size: 1rem;
+  height: 44px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
